@@ -148,4 +148,28 @@ main .card-ctn .book-card .book-action {
   gap: calc(var(--spacer)*2);
 }
 
+main .card-ctn .book-card .book-action > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 3px;
+  width: calc(var(--spacer)*3);
+  padding: calc(var(--spacer)*.1);
+
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: bold;
+  color: var(--white);
+}
+
+main .card-ctn .book-card .book-action > button.remove {
+  background-color: var(--black);
+}
+
+main .card-ctn .book-card .book-action > button.toggle-read {
+  background-color: var(--red);
+}
+
 /* _-_-_-_-_-_-_-_-_-_-_-_ */
