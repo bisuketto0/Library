@@ -41,6 +41,8 @@ header .logo-ctn > .front {
 header .logo {
   font-family: var(--ff-logo);
   font-weight: bold;
+
+  user-select: none;
 }
 
 header .logo.front {
