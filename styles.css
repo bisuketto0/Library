@@ -183,3 +183,20 @@ main .card-ctn .book-card .book-action > button.toggle-read.not-read {
 }
 
 /* _-_-_-_-_-_-_-_-_-_-_-_ */
+
+/* ________DIALOG________ */
+main .form-modal {
+  top: 20%;
+  margin: auto;
+
+  min-height: 400px;
+
+  padding: var(--spacer) 0;
+}
+
+main .form-modal .book-form {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 calc(var(--spacer)*1.5);
+}
