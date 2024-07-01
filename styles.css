@@ -9,11 +9,43 @@
   --green: #52796F;
 
   --font-base: ;
-  --font-logo: 64/68 "Manrope", sans-serif;
+  --ff-logo:  "Manrope", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+header {
+  height: 192px;
+  overflow-y: hidden;
+}
+
+header .logo-ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  position: relative;
+}
+
+header .logo-ctn > .front {
+  text-align: center;
+}
+
+header .logo {
+  font-family: var(--ff-logo);
+  font-weight: bold;
+}
+
+header .logo.front {
+  font-size: 64px;
+  line-height: 96px;
+}
+
+header .logo.back {
+  position: absolute;
+
+  font-size: 128px;
+  line-height: 128px;
 }
