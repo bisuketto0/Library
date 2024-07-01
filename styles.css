@@ -66,6 +66,10 @@ header .logo.back {
 
 /* _-_-_-_-_-_-_-_-_-_-_-_ */
 
+
+/* ________MAIN________ */
+
+/* --add-book-button-- */
 button:hover {
   cursor: pointer;
 }
@@ -87,3 +91,5 @@ main .add-book {
 main .add-book > svg {
   width: 18px;
 }
+
+/* _-_-_-_-_-_-_-_-_-_-_-_ */
