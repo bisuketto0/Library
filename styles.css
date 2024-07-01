@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 :root {
   --white: #F5F5F5;
   --anti-white: #EEEEEE;
@@ -5,6 +7,9 @@
   --red: #8C1821;
   --blue: #314272;
   --green: #52796F;
+
+  --font-base: ;
+  --font-logo: 64/68 "Manrope", sans-serif;
 }
 
 body {
