@@ -100,6 +100,7 @@ main .add-book {
   align-items: center;
 
   margin: 0 auto;
+  margin-top: calc(var(--spacer)*2.5);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -119,7 +120,12 @@ main .card-ctn .book-card > div {
 }
 
 main .card-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacer)*.2);
+
   margin: 0 calc(var(--spacer)*3);
+  margin-top: var(--spacer);
 }
 
 main .card-ctn .book-card {
@@ -168,7 +174,11 @@ main .card-ctn .book-card .book-action > button.remove {
   background-color: var(--black);
 }
 
-main .card-ctn .book-card .book-action > button.toggle-read {
+main .card-ctn .book-card .book-action > button.toggle-read.read {
+  background-color: var(--blue);
+}
+
+main .card-ctn .book-card .book-action > button.toggle-read.not-read {
   background-color: var(--red);
 }
 
