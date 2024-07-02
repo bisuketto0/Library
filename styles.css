@@ -106,6 +106,15 @@ main .add-book {
   border-radius: 50%;
   border: none;
   background-color: var(--green);
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  transition: all 250ms ease;
+}
+
+main .add-book:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 12px;
 }
 
 main .add-book > svg {
@@ -122,7 +131,7 @@ main .card-ctn .book-card > div {
 main .card-ctn {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacer)*.2);
+  gap: calc(var(--spacer)*.3);
 
   margin: 0 calc(var(--spacer)*3);
   margin-top: var(--spacer);
@@ -137,6 +146,13 @@ main .card-ctn .book-card {
 
   border-radius: 6px;
   background-color: var(--anti-white);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  transition: transform 120ms ease;
+}
+
+main .card-ctn .book-card:hover {
+  transform: scale(1.01);
 }
 
 main .card-ctn .book-card .book-info {
@@ -168,6 +184,12 @@ main .card-ctn .book-card .book-action > button {
   font-size: var(--fs-base);
   font-weight: bold;
   color: var(--white);
+
+  transition: transform 120ms ease;
+}
+
+main .card-ctn .book-card .book-action > button:hover {
+  transform: scale(1.1);
 }
 
 main .card-ctn .book-card .book-action > button.remove {
