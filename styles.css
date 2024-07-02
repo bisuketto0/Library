@@ -240,9 +240,14 @@ main .form-modal .book-form input::placeholder {
   font-weight: bold;
 }
 
-main .form-modal .book-form input:focus {
+main .form-modal .book-form > input:focus {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
   transform: scale(1.1);
+}
+
+main .form-modal .book-form input[type=checkbox]:focus {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
+  transform: scale(1.2);
 }
 
 main .form-modal .book-form input[type=text] {
@@ -277,13 +282,26 @@ main .form-modal .book-form input[type=checkbox]:checked::before {
   transform: scale(1);
 }
 
+main .form-modal .book-form .button-row {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacer)*.4);
+}
+
 main .form-modal .book-form input[type=submit] {
   background-color: var(--green);
   color: var(--white);
   font-weight: bold;
 }
 
-main .form-modal .book-form input[type=submit]:hover {
+main .form-modal .book-form input[type=submit]:hover,
+main .form-modal .book-form input[type=button]:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+main .form-modal .book-form input[type=button] {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
 }
