@@ -32,14 +32,17 @@
       <form class="book-form" method="dialog">
         <input id="title" type="text" placeholder="Title">
         <input id="author" type="text" placeholder="Author">
-        <input id="pages" type="number" placeholder="0" min="0">
+        <div class="form-row">
+          <label for="pages">Pages</label>
+          <input id="pages" type="number" placeholder="0" min="0">
+        </div>
         <div class="form-row">
           <label for="isRead">Have you read it?</label>
           <input id="isRead" type="checkbox">
         </div>
         <div class="button-row">
           <input id="submit" type="submit" value="Add Book">
-          <input id="cancel-submit" type="button" value="Cancel">
+          <input id="close-modal" type="button" value="Cancel">
         </div>
       </form>
     </dialog>
@@ -47,53 +50,13 @@
     <div class="card-ctn">
       <div class="book-card">
         <div class="book-info">
-          <h3 class="book-title">Harry Potter</h3>
+          <h3 class="book-title">Harry Potter and the philosopher stone</h3>
           <span class="book-author">J. K. Rowling</span>
           <span class="book-pages">234 Pages</span>
         </div>
-
         <div class="book-action">
-          <button class="toggle-read not-read">Not Read</button>
-          <button class="remove">Remove</button>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <div class="book-info">
-          <h3 class="book-title">Harry Potter</h3>
-          <span class="book-author">J. K. Rowling</span>
-          <span class="book-pages">234 Pages</span>
-        </div>
-
-        <div class="book-action">
-          <button class="toggle-read not-read">Not Read</button>
-          <button class="remove">Remove</button>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <div class="book-info">
-          <h3 class="book-title">Harry Potter</h3>
-          <span class="book-author">J. K. Rowling</span>
-          <span class="book-pages">234 Pages</span>
-        </div>
-
-        <div class="book-action">
-          <button class="toggle-read not-read">Not Read</button>
-          <button class="remove">Remove</button>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <div class="book-info">
-          <h3 class="book-title">Harry Potter</h3>
-          <span class="book-author">J. K. Rowling</span>
-          <span class="book-pages">234 Pages</span>
-        </div>
-
-        <div class="book-action">
-          <button class="toggle-read not-read">Not Read</button>
-          <button class="remove">Remove</button>
+          <button class="toggle-read read">Read</button>
+          <button class="remove-book">Remove</button>
         </div>
       </div>
 

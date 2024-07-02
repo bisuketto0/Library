@@ -141,8 +141,8 @@ main .card-ctn .book-card {
   justify-content: space-between;
   align-items: center;
 
-  height: calc(var(--spacer)*1.6);
-  padding: 0 var(--spacer);
+  min-height: calc(var(--spacer)*1.6);
+  padding: calc(var(--spacer)*.2) var(--spacer);
 
   border-radius: 6px;
   background-color: var(--anti-white);
@@ -160,10 +160,16 @@ main .card-ctn .book-card .book-info {
   line-height: calc(var(--fs-base)*2);
 }
 
+main .card-ctn .book-card .book-info > * {
+  display: flex;
+  align-items: center;
+}
+
 main .card-ctn .book-card .book-info .book-title {
   background-color: #FFFFFF;
   padding: 0 calc(var(--spacer)*.5);
   border-radius: 3px;
+  max-width: calc(var(--spacer)*8);
 }
 
 main .card-ctn .book-card .book-action {
@@ -192,7 +198,7 @@ main .card-ctn .book-card .book-action > button:hover {
   transform: scale(1.1);
 }
 
-main .card-ctn .book-card .book-action > button.remove {
+main .card-ctn .book-card .book-action > button.remove-book {
   background-color: var(--black);
 }
 
@@ -283,17 +289,18 @@ main .form-modal .book-form input[type=number] {
 main .form-modal .book-form input[type=checkbox] {
   display: grid;
   place-content: center;
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   margin: 0;
+  border: 2px solid var(--black);
   appearance: none;
 }
 
 main .form-modal .book-form input[type=checkbox]::before {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-radius: 2px;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
