@@ -186,7 +186,6 @@ main .card-ctn .book-card .book-action > button.toggle-read.not-read {
 
 /* ________DIALOG________ */
 main .form-modal {
-  top: 20%;
   margin: auto;
 
   min-height: 400px;
