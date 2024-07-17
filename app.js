@@ -30,15 +30,18 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
+defaultBook = Book('Galatians', 'Paul', 5, true, bookID);
+addBookToLibrary(defaultBook);
+
 function submitBook() {
   let book;
+  bookID++;
   bookTitle = document.querySelector('.book-form').elements[0].value;
   bookAuthor = document.querySelector('.book-form').elements[1].value;
   bookPages = document.querySelector('.book-form').elements[2].value;
   bookHaveRead = document.querySelector('.book-form').elements[3].checked;
   book = new Book(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
   addBookToLibrary(book);
-  bookID++;
 }
 
 submitBookButton.addEventListener('click', submitBook);
