@@ -9,6 +9,10 @@ let bookHaveRead;
 let bookID = 0;
 
 openModalButton.addEventListener('click', () => {
+  document.querySelector('.book-form').elements[0].value = "";
+  document.querySelector('.book-form').elements[1].value = "";
+  document.querySelector('.book-form').elements[2].value = "";
+  document.querySelector('.book-form').elements[3].checked = false;
   modal.showModal();
 })
 
@@ -85,19 +89,17 @@ function appendBookCard(nodeBook, nodeInfo, nodeTitle, nodeAuhor, nodePages, nod
 }
 
 function submitBook() {
-  let book;
-  bookID++;
   bookTitle = document.querySelector('.book-form').elements[0].value;
   bookAuthor = document.querySelector('.book-form').elements[1].value;
   bookPages = document.querySelector('.book-form').elements[2].value;
   bookHaveRead = document.querySelector('.book-form').elements[3].checked;
-  book = new Book(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
-  addBookToLibrary(book);
-  addBookCard(myLibrary[bookID]);
-  document.querySelector('.book-form').elements[0].value = "";
-  document.querySelector('.book-form').elements[1].value = "";
-  document.querySelector('.book-form').elements[2].value = "";
-  document.querySelector('.book-form').elements[3].checked = false;
+  if ((bookTitle != "") && (bookAuthor != "") && (bookPages != "")) {
+    let book;
+    bookID++;
+    book = new Book(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
+    addBookToLibrary(book);
+    addBookCard(myLibrary[bookID]);
+  }
 }
 
 submitBookButton.addEventListener('click', submitBook);

@@ -244,12 +244,17 @@ main .form-modal .book-form {
   margin: 0 calc(var(--spacer)*1.5);
 
   font-family: var(--ff-base);
+  color: var(--black);
 }
 
 main .form-modal .book-form .form-row {
   display: flex;
   align-items: center;
   gap: calc(var(--spacer)*.5);
+}
+
+main .form-modal .book-form .form-row span {
+  color: var(--red);
 }
 
 main .form-modal .book-form label {

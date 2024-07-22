@@ -30,15 +30,18 @@
 
     <dialog class="form-modal">
       <form class="book-form" method="dialog">
-        <input id="title" type="text" placeholder="Title">
-        <input id="author" type="text" placeholder="Author">
+        <input id="title" type="text" placeholder="Title *" required>
+        <input id="author" type="text" placeholder="Author *" required>
         <div class="form-row">
-          <label for="pages">Pages</label>
-          <input id="pages" type="number" placeholder="0" min="0">
+          <label for="pages">Pages *</label>
+          <input id="pages" type="number" placeholder="0" min="0" required>
         </div>
         <div class="form-row">
           <label for="isRead">Have you read it?</label>
           <input id="isRead" type="checkbox">
+        </div>
+        <div class="form-row">
+          <span>(*) Required</span>
         </div>
         <div class="button-row">
           <input id="submit-book" type="submit" value="Add Book">
