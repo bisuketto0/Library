@@ -13,6 +13,10 @@ openModalButton.addEventListener('click', () => {
 })
 
 closeModalButton.addEventListener('click', () => {
+  document.querySelector('.book-form').elements[0].value = "";
+  document.querySelector('.book-form').elements[1].value = "";
+  document.querySelector('.book-form').elements[2].value = "";
+  document.querySelector('.book-form').elements[3].checked = false;
   modal.close();
 })
 
@@ -90,6 +94,10 @@ function submitBook() {
   book = new Book(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
   addBookToLibrary(book);
   addBookCard(myLibrary[bookID]);
+  document.querySelector('.book-form').elements[0].value = "";
+  document.querySelector('.book-form').elements[1].value = "";
+  document.querySelector('.book-form').elements[2].value = "";
+  document.querySelector('.book-form').elements[3].checked = false;
 }
 
 submitBookButton.addEventListener('click', submitBook);
