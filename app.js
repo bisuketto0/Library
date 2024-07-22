@@ -30,10 +30,11 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-defaultBook = Book('Galatians', 'Paul', 5, true, bookID);
+defaultBook = new Book('Galatians', 'Paul', 5, true, bookID);
 addBookToLibrary(defaultBook);
+addBookCard(myLibrary[bookID]);
 
-function addBookCard(title, author, pages, haveRead, id) {
+function addBookCard(book) {
   const nodeBookCard = document.createElement('div');
   const nodeBookInfo = document.createElement('div');
   const nodeBookTitle = document.createElement('h3');
@@ -52,10 +53,10 @@ function addBookCard(title, author, pages, haveRead, id) {
   nodeBookHaveRead.classList.add('toggle-read');
   nodeBookRemove.classList.add('remove-book');
 
-  nodeBookTitle.textContent = title;
-  nodeBookAuthor.textContent = author;
-  nodeBookPages.textContent = pages;
-  if(haveRead) {
+  nodeBookTitle.textContent = book.title;
+  nodeBookAuthor.textContent = book.author;
+  nodeBookPages.textContent = `${book.pages} Pages`;
+  if(book.haveRead) {
     nodeBookHaveRead.classList.add('read');
     nodeBookHaveRead.textContent = 'Read'
   } else {
@@ -63,7 +64,7 @@ function addBookCard(title, author, pages, haveRead, id) {
     nodeBookHaveRead.textContent = 'Not Read'
   }
   nodeBookRemove.textContent = 'Remove';
-  nodeBookCard.dataset.id = id;
+  nodeBookCard.dataset.id = book.id;
 
   appendBookCard(nodeBookCard, nodeBookInfo, nodeBookTitle, nodeBookAuthor, nodeBookPages, nodeBookAction, nodeBookHaveRead, nodeBookRemove);
 }
@@ -88,7 +89,7 @@ function submitBook() {
   bookHaveRead = document.querySelector('.book-form').elements[3].checked;
   book = new Book(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
   addBookToLibrary(book);
-  addBookCard(bookTitle, bookAuthor, bookPages, bookHaveRead, bookID);
+  addBookCard(myLibrary[bookID]);
 }
 
 submitBookButton.addEventListener('click', submitBook);
