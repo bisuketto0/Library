@@ -396,4 +396,13 @@ main .form-modal .book-form input[type=button] {
   :root {
     --fs-logo: 30px;
   }
+  button {
+    transition: none;
+    transform: none;
+  }
+  button:hover,
+  button:focus {
+    transition: none;
+    transform: none;
+  }
 }
