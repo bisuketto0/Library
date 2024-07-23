@@ -39,6 +39,7 @@ header {
   display: grid;
   position: relative;
 
+  margin-bottom: var(--spacer);
   height: calc(var(--fs-logo)*3);
   overflow-y: hidden;
 }
@@ -84,6 +85,8 @@ header .logo.back {
 /* ________MAIN________ */
 
 main {
+  display: grid;
+
   font-family: var(--ff-base);
   font-size: var(--fs-base);
   line-height: 16px;
@@ -99,8 +102,12 @@ main .add-book {
   justify-content: center;
   align-items: center;
 
-  margin: 0 auto;
-  margin-top: calc(var(--spacer)*2.5);
+  position: fixed;
+  bottom: var(--spacer);
+  right: var(--spacer);
+  justify-self: center;
+  z-index: 1;
+
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -356,9 +363,6 @@ main .form-modal .book-form input[type=button] {
 @media (max-width: 1024px) {
   :root {
     --fs-logo: 36px;
-  }
-  main .add-book {
-    margin-top: calc(var(--spacer)*1.5);
   }
   main .card-ctn {
     display: grid;
