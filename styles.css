@@ -259,6 +259,7 @@ main .form-modal .book-form .form-row span {
 
 main .form-modal .book-form label {
   display: inline;
+  text-wrap: nowrap;
 }
 
 main .form-modal .book-form input {
@@ -291,18 +292,18 @@ main .form-modal .book-form input[type=checkbox]:focus {
 }
 
 main .form-modal .book-form input[type=text] {
-  width: calc(var(--spacer)*6);
+  max-width: calc(var(--spacer)*6);
   height: calc(var(--spacer)*1.2);
 }
 
 main .form-modal .book-form input[type=number] {
-  width: 100px;
+  max-width: 100px;
 }
 main .form-modal .book-form input[type=checkbox] {
   display: grid;
   place-content: center;
-  width: 22px;
-  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
   padding: 0;
   margin: 0;
   border: 2px solid var(--black);
@@ -350,4 +351,49 @@ main .form-modal .book-form input[type=button] {
   background-color: var(--black);
   color: var(--white);
   font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --fs-logo: 36px;
+  }
+  main .add-book {
+    margin-top: calc(var(--spacer)*1.5);
+  }
+  main .card-ctn {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: calc(var(--spacer)*1.2);
+    margin: calc(var(--spacer)*1.2) calc(var(--spacer)*.5);
+  }
+  main .card-ctn .book-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer);
+    
+    padding: calc(var(--spacer)*.5) 0;
+  }
+  main .card-ctn .book-card .book-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: calc(var(--spacer)*.5);
+  }
+
+  main .card-ctn .book-card .book-action {
+    gap: calc(var(--spacer)*.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .card-ctn .book-card .book-action > button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-logo: 30px;
+  }
 }
