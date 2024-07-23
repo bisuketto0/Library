@@ -62,6 +62,7 @@ function addBookCard(book) {
   nodeBookRemove.classList.add('remove-book');
 
   nodeBookHaveRead.addEventListener('click', toggleRead);
+  nodeBookRemove.addEventListener('click', removeBook);
 
   nodeBookTitle.textContent = book.title;
   nodeBookAuthor.textContent = book.author;
@@ -89,6 +90,13 @@ function toggleRead() {
   }
   this.classList.toggle('read');
   this.classList.toggle('not-read');
+}
+
+function removeBook() {
+  let text = "Are you sure you want to remove this book from your library?"
+  if (confirm(text)) {
+    this.parentNode.parentNode.remove();
+  }
 }
 
 function appendBookCard(nodeBook, nodeInfo, nodeTitle, nodeAuhor, nodePages, nodeAction, nodeRead, nodeRemove ) {
