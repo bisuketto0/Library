@@ -396,13 +396,25 @@ main .form-modal .book-form input[type=button] {
   :root {
     --fs-logo: 30px;
   }
-  button {
+  main .card-ctn .book-card .book-action > button {
     transition: none;
     transform: none;
   }
-  button:hover,
-  button:focus {
+  main .card-ctn .book-card .book-action > button:hover,
+  main .card-ctn .book-card .book-action > button:focus {
     transition: none;
+    transform: none;
+  }
+  main .form-modal .book-form input {
+    transition: none;
+  }
+  main .form-modal .book-form input[type=submit]:hover,
+  main .form-modal .book-form input[type=button]:hover {
+    transform: none;
+  }
+  
+  main .form-modal .book-form input[type=submit]:focus,
+  main .form-modal .book-form input[type=button]:focus {
     transform: none;
   }
 }
