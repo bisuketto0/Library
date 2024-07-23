@@ -61,6 +61,8 @@ function addBookCard(book) {
   nodeBookHaveRead.classList.add('toggle-read');
   nodeBookRemove.classList.add('remove-book');
 
+  nodeBookHaveRead.addEventListener('click', toggleRead);
+
   nodeBookTitle.textContent = book.title;
   nodeBookAuthor.textContent = book.author;
   nodeBookPages.textContent = `${book.pages} Pages`;
@@ -75,6 +77,18 @@ function addBookCard(book) {
   nodeBookCard.dataset.id = book.id;
 
   appendBookCard(nodeBookCard, nodeBookInfo, nodeBookTitle, nodeBookAuthor, nodeBookPages, nodeBookAction, nodeBookHaveRead, nodeBookRemove);
+}
+
+function toggleRead() {
+  if (myLibrary[this.parentNode.parentNode.dataset.id].haveRead) {
+    myLibrary[this.parentNode.parentNode.dataset.id].haveRead = false;
+    this.textContent = 'Not Read';
+  } else {
+    myLibrary[this.parentNode.parentNode.dataset.id].haveRead = true;
+    this.textContent = 'Read'
+  }
+  this.classList.toggle('read');
+  this.classList.toggle('not-read');
 }
 
 function appendBookCard(nodeBook, nodeInfo, nodeTitle, nodeAuhor, nodePages, nodeAction, nodeRead, nodeRemove ) {
