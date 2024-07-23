@@ -384,6 +384,11 @@ main .form-modal .book-form input[type=button] {
     gap: calc(var(--spacer)*.5);
   }
 
+  main .card-ctn .book-card .book-info .book-title {
+    text-align: center;
+    margin: 0 calc(var(--spacer)*.5);
+  }
+
   main .card-ctn .book-card .book-action {
     gap: calc(var(--spacer)*.5);
     display: flex;
