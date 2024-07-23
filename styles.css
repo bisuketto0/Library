@@ -341,6 +341,11 @@ main .form-modal .book-form input[type=button]:hover {
   transform: scale(1.1);
 }
 
+main .form-modal .book-form input[type=submit]:focus,
+main .form-modal .book-form input[type=button]:focus {
+  transform: scale(1.1);
+}
+
 main .form-modal .book-form input[type=button] {
   background-color: var(--black);
   color: var(--white);
